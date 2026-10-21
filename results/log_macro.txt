@@ -1,0 +1,38 @@
+{'model': 'Baseline: clase mayoritaria', 'accuracy': 0.33651226158038144, 'macro_f1': 0.12589194699286443, 'weighted_f1': 0.16945673518930524, 'fit_s': 0.01, 'predict_s': 0.0}
+{'model': 'Baseline: Regresión logística', 'accuracy': 0.8975476839237058, 'macro_f1': 0.9106825939626604, 'weighted_f1': 0.8974888964844545, 'fit_s': 0.33, 'predict_s': 0.0}
+{'model': 'Baseline: k-NN (k=15)', 'accuracy': 0.8940054495912807, 'macro_f1': 0.9075173628399964, 'weighted_f1': 0.8943236946456543, 'fit_s': 0.02, 'predict_s': 0.26}
+{'model': 'SVC RBF SIN escalar', 'accuracy': 0.9122615803814714, 'macro_f1': 0.9230920223253223, 'weighted_f1': 0.9121794054245308, 'fit_s': 2.35, 'predict_s': 0.83}
+{'model': 'SVC RBF con StandardScaler', 'accuracy': 0.9190735694822888, 'macro_f1': 0.9292576873114013, 'weighted_f1': 0.9191338240441815, 'fit_s': 2.14, 'predict_s': 0.76}
+{'model': 'SVC linear OvO (C=1)', 'accuracy': 0.9, 'macro_f1': 0.9126249257975256, 'weighted_f1': 0.8998778086905007, 'fit_s': 2.52, 'predict_s': 0.19}
+{'model': 'SVC poly OvO (C=1)', 'accuracy': 0.8956403269754768, 'macro_f1': 0.9101094313829245, 'weighted_f1': 0.8971402103787522, 'fit_s': 2.77, 'predict_s': 0.35}
+{'model': 'SVC rbf OvO (C=1)', 'accuracy': 0.9190735694822888, 'macro_f1': 0.9292576873114013, 'weighted_f1': 0.9191338240441815, 'fit_s': 2.27, 'predict_s': 0.78}
+{'model': 'linear OvO', 'accuracy': 0.9, 'macro_f1': 0.9126249257975256, 'weighted_f1': 0.8998778086905007, 'fit_s': 2.66, 'predict_s': 0.19}
+{'model': 'linear OvR', 'accuracy': 0.8991825613079019, 'macro_f1': 0.9118815157679495, 'weighted_f1': 0.8992282702299396, 'fit_s': 10.71, 'predict_s': 0.44}
+{'model': 'rbf OvO', 'accuracy': 0.9190735694822888, 'macro_f1': 0.9292576873114013, 'weighted_f1': 0.9191338240441815, 'fit_s': 2.1, 'predict_s': 0.76}
+{'model': 'rbf OvR', 'accuracy': 0.9174386920980926, 'macro_f1': 0.9277101181355207, 'weighted_f1': 0.9174775107898914, 'fit_s': 5.75, 'predict_s': 1.5}
+{'model': 'LinearSVC OvR (liblinear)', 'accuracy': 0.8991825613079019, 'macro_f1': 0.9118498778924503, 'weighted_f1': 0.8991863522959059, 'fit_s': 0.34, 'predict_s': 0.0}
+        C  gamma     cv_f1  train_f1
+0     0.1  0.001  0.868905  0.868912
+1     0.1   0.01  0.908889  0.909315
+2     0.1    0.1  0.917337  0.922919
+3     0.1  scale  0.916658  0.917337
+4     1.0  0.001  0.906043  0.907240
+5     1.0   0.01  0.924232  0.926722
+6     1.0    0.1  0.929110  0.953754
+7     1.0  scale  0.928777  0.934933
+8    10.0  0.001  0.919866  0.922096
+9    10.0   0.01  0.930639  0.938172
+10   10.0    0.1  0.919216  0.992734
+11   10.0  scale  0.929402  0.953340
+12  100.0  0.001  0.926323  0.930920
+13  100.0   0.01  0.928089  0.954092
+14  100.0    0.1  0.908386  1.000000
+15  100.0  scale  0.917480  0.983606 {'svm__C': 10, 'svm__gamma': 0.01}
+{'model': 'SVC RBF OPTIMIZADO (OvO)', 'accuracy': 0.9174386920980926, 'macro_f1': 0.9277791348803669, 'weighted_f1': 0.9174110188944369, 'fit_s': 2.04, 'predict_s': 0.69}
+{'model': 'PCA k=2 + SVC', 'accuracy': 0.7242506811989101, 'macro_f1': 0.7476297099422263, 'weighted_f1': 0.7129073048245008, 'fit_s': 2.91, 'predict_s': 0.75}
+{'model': 'PCA k=3 + SVC', 'accuracy': 0.802724795640327, 'macro_f1': 0.8269714282951178, 'weighted_f1': 0.8023382098868389, 'fit_s': 1.63, 'predict_s': 0.62}
+{'model': 'PCA k=5 + SVC', 'accuracy': 0.8544959128065395, 'macro_f1': 0.8744063704052785, 'weighted_f1': 0.8553245927007527, 'fit_s': 1.29, 'predict_s': 0.49}
+{'model': 'PCA k=10 + SVC', 'accuracy': 0.8907356948228883, 'macro_f1': 0.9047706227729405, 'weighted_f1': 0.8910232469891474, 'fit_s': 1.1, 'predict_s': 0.4}
+{'model': 'PCA k=14 + SVC', 'accuracy': 0.9076294277929156, 'macro_f1': 0.9193989733943162, 'weighted_f1': 0.9078038468179411, 'fit_s': 1.32, 'predict_s': 0.39}
+{'model': 'PCA k=36 + SVC', 'accuracy': 0.9174386920980926, 'macro_f1': 0.9277791348803669, 'weighted_f1': 0.9174110188944369, 'fit_s': 1.97, 'predict_s': 0.64}
+LISTO y_macro
