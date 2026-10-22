@@ -1,4 +1,4 @@
-"""Demo: predictor de demarcación táctica (SVM RBF, FC 24).  Ejecutar:  streamlit run app/streamlit_app.py"""
+
 import sys, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
@@ -41,6 +41,7 @@ with tab1:
     c1, c2, c3 = st.columns(3)
     c1.metric("Posición real (1ª listada)", real); c2.metric("Predicción SVM", pred)
     c3.metric("¿Acierta?", "Sí" if pred == real else "No")
+    st.caption("Puntaje relativo de cada posición (softmax de la decisión del SVM). No es una probabilidad calibrada.")
     st.bar_chart(sc)
 
 with tab2:
@@ -54,10 +55,17 @@ with tab2:
          "Extremo": dict(skill_dribbling=86, movement_acceleration=88, movement_sprint_speed=87, attacking_crossing=75, defending_standing_tackle=35)}.get(preset, {})
     vals = base.copy()
     for k, v in P.items(): vals[k] = v
+    LABELS = {
+    "attacking_finishing": "Definición", "skill_dribbling": "Regate",
+    "skill_long_passing": "Pase largo", "defending_standing_tackle": "Entrada (de pie)",
+    "mentality_interceptions": "Intercepciones", "movement_sprint_speed": "Velocidad punta",
+    "power_strength": "Fuerza", "goalkeeping_reflexes": "Reflejos de portero",
+}
     keys = ["attacking_finishing", "skill_dribbling", "skill_long_passing", "defending_standing_tackle",
             "mentality_interceptions", "movement_sprint_speed", "power_strength", "goalkeeping_reflexes"]
     cols = st.columns(4)
     for i, k in enumerate(keys):
-        vals[k] = cols[i % 4].slider(k, 1, 99, int(round(vals[k])), key=f"{preset}_{k}")
+        vals[k] = cols[i % 4].slider(LABELS[k], 1, 99, int(round(vals[k])), key=f"{preset}_{k}")
     pred, sc = predict(vals.values)
+    st.caption("Puntaje relativo de cada posición (softmax de la decisión del SVM). No es una probabilidad calibrada.")
     st.success(f"Predicción: **{pred}**"); st.bar_chart(sc)
