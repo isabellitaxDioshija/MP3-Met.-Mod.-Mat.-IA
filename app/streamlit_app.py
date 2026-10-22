@@ -21,6 +21,8 @@ target = st.sidebar.radio("Granularidad", ["y_macro", "y_fine"],
 model = get_model(target)
 players = get_players()
 classes = list(model.classes_)
+RENAME = {"POR": "GK", "MED": "MID", "DEL": "FWD"}   # DEF ya coincide
+show = lambda c: RENAME.get(c, c)
 
 def predict(x):
     x = np.asarray(x, float).reshape(1, -1)
